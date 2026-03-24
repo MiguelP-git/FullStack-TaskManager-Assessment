@@ -36,25 +36,60 @@ function TaskForm({ onAdd }) {
   };
 
   return (
-    <div>
-      <h2>Add Task</h2>
+<div style={{padding: "50px"}}>
+  <h2>Add Task</h2>
 
-      {error && <p style={{ color: "red" }}>{error}</p>}
+  {error && <p style={{ color: "red", marginBottom: "8px" }}>{error}</p>}
 
-      <input
-        placeholder="Title"
-        value={title}
-        onChange={(e) => setTitle(e.target.value)}
-      />
+  <input
+    type="text"
+    placeholder="Title"
+    value={title}
+    onChange={(e) => setTitle(e.target.value)}
+    style={{
+      width: "50%",
+      padding: "8px 12px",
+      marginBottom: "8px",
+      borderRadius: "4px",
+      border: "1px solid #ccc",
+      fontSize: "1rem",
+      outline: "none",
+    }}
+  />
 
-      <input
-        placeholder="Description"
-        value={description}
-        onChange={(e) => setDescription(e.target.value)}
-      />
+  <textarea
+    type="text"
+    placeholder="Description"
+    value={description}
+    onChange={(e) => setDescription(e.target.value)}
+    style={{
+      width: "50%",
+      padding: "8px 12px",
+      marginBottom: "12px",
+      borderRadius: "4px",
+      border: "1px solid #ccc",
+      fontSize: "1rem",
+      outline: "none",
+    }}
+  />
 
-      <button onClick={handleSubmit}>Add</button>
-    </div>
+  <button
+    onClick={handleSubmit}
+    style={{
+      width: "52%",
+      padding: "10px",
+      borderRadius: "4px",
+      border: "none",
+      backgroundColor: "#576ad8",
+      color: "#fff",
+      fontWeight: "bold",
+      cursor: "pointer",
+      fontSize: "1rem",
+    }}
+  >
+    Add
+  </button>
+</div>
   );
 }
 
