@@ -43,12 +43,12 @@ function TaskForm({ onAdd }) {
 
   <input
     type="text"
-    placeholder="Title"
+    placeholder="Task Title"
     value={title}
     onChange={(e) => setTitle(e.target.value)}
     style={{
       width: "50%",
-      padding: "8px 12px",
+      padding: "3px 5px",
       marginBottom: "8px",
       borderRadius: "4px",
       border: "1px solid #ccc",
@@ -64,7 +64,7 @@ function TaskForm({ onAdd }) {
     onChange={(e) => setDescription(e.target.value)}
     style={{
       width: "50%",
-      padding: "8px 12px",
+      padding: "3px 4px",
       marginBottom: "12px",
       borderRadius: "4px",
       border: "1px solid #ccc",
@@ -76,8 +76,8 @@ function TaskForm({ onAdd }) {
   <button
     onClick={handleSubmit}
     style={{
-      width: "52%",
-      padding: "10px",
+      width: "51%",
+      padding: "6px",
       borderRadius: "4px",
       border: "none",
       backgroundColor: "#576ad8",
